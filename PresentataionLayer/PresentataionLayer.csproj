@@ -158,8 +158,6 @@
     <Content Include="Presentation\Views\_ViewStart.cshtml" />
     <Content Include="Presentation\Views\Shared\Error.cshtml" />
     <Content Include="Presentation\Views\Shared\_Layout.cshtml" />
-    <Content Include="Presentation\Views\Home\About.cshtml" />
-    <Content Include="Presentation\Views\Home\Contact.cshtml" />
     <Content Include="Presentation\Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
