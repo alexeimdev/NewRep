@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresentataionLayer.BusinessLogic.Managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,14 +10,10 @@ namespace PresentataionLayer.BusinessLogic.Controllers
     public class PersonController : Controller
     {
         // GET: Person
-        public JsonResult GetPersonId()
-        {  
-            var obj = new {
-                Id = 5,
-                Code = "assert"
-            };
-
-            return Json(obj, JsonRequestBehavior.AllowGet);
+        public JsonResult GetPerson()
+        {
+            var model = PersonManager.GetPersonTest();
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
     }
 }

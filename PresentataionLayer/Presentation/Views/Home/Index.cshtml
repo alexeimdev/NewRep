@@ -5,16 +5,24 @@
 <div>
     Home/Index
 </div>
+<div id="content">
+
+</div>
 
 <script>
     $(document).ready(function () {
         $.ajax({
-            url: "/Person/GetPersonId",
-            success: function (res) {
-                if (res) {
-                    alert("Id= " + res.Id +", Code= " + res.Code );
-                }
+            url: "/Person/GetPerson",
+            success: function (response) {
+                success(response);
             }
         });
     });
+
+    function success(data) {
+        var contentDiv = $("#content");
+        contentDiv.append(" Id= " + data.Id);
+        contentDiv.append(" Name= " + data.Name);
+    }
+
 </script>
